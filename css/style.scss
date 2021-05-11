@@ -1,0 +1,146 @@
+$bgColor: rgb(0, 0, 0);
+
+$progColor: rgb(168, 0, 93);
+$progBgColor: rgb(68, 68, 68);
+
+$loadingText: white;
+
+$containerColor: rgba(0, 0, 0, 0.336);
+$containerTextColor: white;
+//////////////////////////////////
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+//////////////////////////////////
+/// Basic CSS:
+//////////////////////////////////
+body {
+    background-color: $bgColor;
+}
+
+//////////////////////////////////
+/// Container CSS:
+//////////////////////////////////
+.outerContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.mainContainer {
+    height: 22rem;
+    width: 25rem;
+
+    float: left;
+    margin: 2rem;
+    box-shadow: 0 0 15px $progColor;
+
+    border-radius: 1rem 0.5rem 1rem 0.5rem;
+    background-color: $containerColor;
+}
+/// Text Styling inside the Container:
+.mainContainer p {
+    font-family: 'Raleway', sans-serif;
+    padding: 15px;
+    color: $containerTextColor;
+    text-shadow: 0 0 1px black;
+}
+/// Header one
+.mainContainer h1 {
+    padding-top: 0.2rem;
+    font-family: 'Lobster';
+    text-decoration: underline;
+    color: goldenrod;
+    text-align: center;
+}
+/// Header two
+.mainContainer h5 {
+    text-align: center;
+    color: $containerTextColor;
+}
+
+//////////////////////////////////
+/// Social bar CSS:
+//////////////////////////////////
+.social {
+    text-align: center;
+    margin-top: -35px;
+}
+
+//////////////////////////////////
+/// "Press Space to pause..." Popup CSS:
+//////////////////////////////////
+.musicPopup {
+    text-align: center;   
+    width: 20rem;
+    color: $containerTextColor;
+
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.24);
+
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/// Text inside the Popup.
+.musicPopup p {
+    margin: 10px;
+}
+
+//////////////////////////////////
+/// Loadingbar CSS:
+//////////////////////////////////
+.loadbar {
+    position: relative;
+    width: 100%;
+    background-color: $progBgColor;
+    height: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: block;
+} 
+.progressBar {
+    width: 10%;
+    background-color: $progColor;
+    height: 20px;
+    position: absolute;
+    left: 10%;
+}
+.loadingText {
+    bottom: 2rem;
+
+    text-shadow: 0 0 10px $progColor;
+    color: $loadingText;
+    font-size: 1.5rem;
+    font-family: 'Lobster';
+
+    position: absolute;
+}
+
+//////////////////////////////////
+/// Backround Video CSS:
+//////////////////////////////////
+.bgvid {
+    filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -10;
+    pointer-events: none;
+}
