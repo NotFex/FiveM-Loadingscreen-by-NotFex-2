@@ -18,6 +18,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://res.cloudinary.com/veseylab/raw/upload/v1597754760/magicmouse/magic-mouse-1.0.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -38,7 +42,7 @@
         </p>
         <h5>Join our Discord!</h5>
         <div class="social">
-          <a href="https://discord.gg/bk8hjxJMny">
+          <a class="magic-hover" href="https://discord.gg/bk8hjxJMny">
             <img height="132px" src="img/discord.svg" alt="discord" />
           </a>
         </div>
@@ -74,5 +78,20 @@
     </div>
     <script src="js/audioController.js"></script>
     <script src="js/loading.js"></script>
+    <script
+      type="text/javascript"
+      src="https://res.cloudinary.com/veseylab/raw/upload/v1597754761/magicmouse/magic_mouse-1.0.js"
+    ></script>
+    <script type="text/javascript">
+      options = {
+        cursorOuter: "disable",
+        hoverEffect: "pointer-blur",
+        hoverItemMove: false,
+        defaultCursor: false,
+        outerWidth: 30,
+        outerHeight: 30,
+      };
+      magicMouse(options);
+    </script>
   </body>
 </html>
